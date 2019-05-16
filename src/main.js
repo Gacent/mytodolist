@@ -5,6 +5,8 @@ import App from './App'
 import router from './router'
 import 'element-ui/lib/theme-chalk/index.css'
 import element from 'element-ui'
+import 'babel-polyfill'
+import './mock/mock'
 
 Vue.config.productionTip = false
 Vue.use(element)

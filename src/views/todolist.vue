@@ -64,6 +64,7 @@
 <script>
 import dayjs from 'dayjs'
 import editdialog from './components/editdialog'
+import api from '@/api/index'
 export default {
   name: 'todolist',
   components: {
@@ -86,6 +87,9 @@ export default {
   },
   mounted () {
     this.isShow = true
+    api.getList({aa: 1}).then((res) => {
+      this.list = res.list
+    })
   },
   methods: {
     edit (index, row) {
